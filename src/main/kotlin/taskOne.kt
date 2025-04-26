@@ -24,9 +24,9 @@ fun showMinuteText(second: Int): String = when (second / 60) {
 
 }
 fun showHoursText(second: Int): String = when (second / 3600) {
-    1, 21 -> "час назад"
-    in 5..20 -> "часов назад"
-    else -> "часа назад"
+    1, 21 -> "час"
+    in 5..20 -> "часов"
+    else -> "часа"
 }
 
 
