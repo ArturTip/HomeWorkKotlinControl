@@ -6,11 +6,11 @@ var amountOfTransfersMasterCard = 0
 var amountOfTransfersMasterMir = 0
 
 
-fun calcCommissionVisa(payment:Int ) {
+fun calcCommissionVisa() {
 
 
 }
-fun calcCommissionMastercard(payment:Int, limitMonthMasterCard : Int ) {
+fun calcCommissionMastercard(limitMonthMasterCard : Int ) {
 
 
 }
