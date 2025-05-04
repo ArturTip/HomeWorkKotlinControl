@@ -3,7 +3,7 @@ import kotlin.math.max
 const val ERROR_TYPE = -1
 const val ERROR_LIMIT = -2
 
-fun commissn(typeCard: String, transfer: Int, previous: Int): Int {
+fun commissn(transfer: Int, previous: Int = 0 , typeCard: String = "Mir"): Int {
     val monthlyLimit = 600_000
     val dayLimit = 150_000
     val minVisaCommissn = 35
@@ -14,7 +14,7 @@ fun commissn(typeCard: String, transfer: Int, previous: Int): Int {
     val masterCardCommissn = when {
         previous + transfer < freePayMastercard -> 0
         previous > freePayMastercard -> (transfer * percentMastercardCommissn).toInt()
-        previous + transfer > freePayMastercard -> ((previous + transfer) * percentMastercardCommissn).toInt()
+        previous + transfer > freePayMastercard -> (((previous + transfer) - freePayMastercard) * percentMastercardCommissn).toInt()
         else -> ERROR_LIMIT
     }
     val mirCommissn = 0

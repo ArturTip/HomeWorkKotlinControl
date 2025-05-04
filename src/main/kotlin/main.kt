@@ -5,7 +5,7 @@ fun main() {
 //     agoToText(86500)
 
 
-    println(commissn("Visa", 70_000, 20_000))
-    println(commissn("Mastercard", 10_000, 65_001))
-    println(commissn("Mastercard", 10000, 100_000))
+   println(commissn(100000,0))
+    println(commissn(10000,76000, "Mastercard"))
+
 }
