@@ -14,6 +14,7 @@ fun agoToText(second: Int) {
     }
     println(resultTime)
 }
+
 fun showMinuteText(second: Int): String = when (second / 60) {
     in 11..14 -> "минут"
     else -> when ((second / 60) % 10) {
@@ -23,6 +24,7 @@ fun showMinuteText(second: Int): String = when (second / 60) {
     }
 
 }
+
 fun showHoursText(second: Int): String = when (second / 3600) {
     1, 21 -> "час"
     in 5..20 -> "часов"
